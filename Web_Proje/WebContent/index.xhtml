@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>IBRHMGLCYZ - Responsive Web Application Kit by Eugene
+		Kopyov</title>
+	<!-- Global stylesheets -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900"
+		rel="stylesheet" type="text/css" />
+	<link href="Design/assets/css/icons/icomoon/styles.css"
+		rel="stylesheet" type="text/css" />
+	<link href="Design/assets/css/bootstrap.css" rel="stylesheet"
+		type="text/css" />
+	<link href="Design/assets/css/core.css" rel="stylesheet"
+		type="text/css" />
+	<link href="Design/assets/css/components.css" rel="stylesheet"
+		type="text/css" />
+	<link href="Design/assets/css/colors.css" rel="stylesheet"
+		type="text/css" />
+	<link href="Design/assets/css/icons/fontawesome/styles.min.css"
+		rel="stylesheet" type="text/css" />
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript"
+		src="Design/assets/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript"
+		src="Design/assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="Design/assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="Design/assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript"
+		src="Design/assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script type="text/javascript"
+		src="Design/assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script type="text/javascript"
+		src="Design/assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script type="text/javascript"
+		src="Design/assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script type="text/javascript"
+		src="Design/assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script type="text/javascript"
+		src="Design/assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script type="text/javascript"
+		src="Design/assets/js/plugins/pickers/daterangepicker.js"></script>
+
+	<script type="text/javascript" src="Design/assets/js/core/app.js"></script>
+										<script type="text/javascript"
+											src="Design/assets/js/pages/dashboard.js"></script>
+	<!-- /theme JS files -->
+</h:head>
+<h:body>
+	<h:form>
+		<!-- Main navbar -->
+		<div class="navbar navbar-inverse">
+			
+			<div class="navbar-header navbar-right">
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown language-switch"><a
+						class="dropdown-toggle" data-toggle="dropdown"> <img
+							src="Design/assets/images/flags/gb.png" class="position-left" alt="" />
+								English <span class="caret" /></a>
+
+						<ul class="dropdown-menu">
+							<li><a class="deutsch"><img src="Design/assets/images/flags/de.png" alt="" /> Deutsch</a></li>
+							<li><a class="ukrainian"><img
+									src="Design/assets/images/flags/ua.png" alt="" /> Українська</a></li>
+							<li><a class="english"><img
+									src="Design/assets/images/flags/gb.png" alt="" /> English</a></li>
+							<li><a class="espana"><img
+									src="Design/assets/images/flags/es.png" alt="" /> España</a></li>
+							<li><a class="russian"><img
+									src="Design/assets/images/flags/ru.png" alt="" /> Русский</a></li>
+						</ul></li>
+
+
+					<li class="dropdown dropdown-user"><a class="dropdown-toggle"
+						data-toggle="dropdown"> <img
+							src="Design/assets/images/placeholder.jpg" alt="" /> <span>
+							<h:outputLabel value="#{indexBean.loginUsers.adsoyad}"/></span>
+								<i class="caret"></i></a>
+
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#"><i class="icon-user-plus"></i> My
+									profile</a></li>
+							<li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+							<li><a href="#"><span
+									class="badge bg-teal-400 pull-right">58</span> <i
+									class="icon-comment-discussion"></i> Messages</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-cog5"></i> Account
+									settings</a></li>
+							<li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /main navbar -->
+
+
+		<!-- Page container -->
+		<div class="page-container">
+
+			<!-- Page content -->
+			<div class="page-content">
+
+				<!-- SOL MENU -->
+				<div class="sidebar sidebar-main">
+					<div class="sidebar-content">
+
+						<!-- User menu -->
+						<div class="sidebar-user">
+							<div class="category-content">
+								<div class="media">
+									<a href="#" class="media-left"><img
+										src="Design/assets/images/placeholder.jpg" class="img-circle img-sm"
+										alt="" /></a>
+									<div class="media-body">
+										<span class="media-heading text-semibold">
+											<h:outputLabel value=""/></span>
+										<div class="text-size-mini text-muted">
+											<i class="icon-pin text-size-small"></i>&nbsp;
+											<h:outputLabel value="#{indexBean.loginUsers.adres}"/>
+											
+										</div>
+									</div>
+
+									<div class="media-right media-middle">
+										<ul class="icons-list">
+											<li><a href="#"><i class="icon-cog3"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /user menu -->
+
+
+						<!-- Main navigation -->
+						<div class="sidebar-category sidebar-category-visible">
+							<div class="category-content no-padding">
+								<ul class="navigation navigation-main navigation-accordion">
+
+									<!-- Main -->
+									<li class="navigation-header"><span>Main</span> <i
+										class="icon-menu" title="Main pages"></i></li>
+									<li class="active"><a href="index.jsf"><i
+											class="icon-home4"></i> <span>Ana Sayfa</span></a></li>
+									
+									<ui:repeat var="ls" value="#{indexBean.kategoriListParent}">
+									
+									<li><a href="#"><i class="icon-stack2"></i> <span>
+									#{ls.ad}</span></a>
+										<ul>
+											<ui:repeat var="cls" value="#{indexBean.getKategoriListChild(ls.id)}">
+									
+											<li>
+											<h:commandLink action="#{indexBean.urlVer(cls.id)}">#{cls.ad}</h:commandLink>
+											</li>
+											</ui:repeat>
+										
+										</ul></li>
+										
+									</ui:repeat>	
+									
+								
+									
+									<!-- /main -->
+
+
+								</ul>
+							</div>
+						</div>
+						<!-- /main navigation -->
+
+					</div>
+				</div>
+				<!-- /main sidebar -->
+
+
+				<!-- ORTA KISIM -->
+				<div class="content-wrapper">
+
+					
+
+
+					<!-- ORTA ALAN -->
+					<div class="content">
+
+							
+
+						<!-- Main charts -->
+						<div class="row"></div>
+						<!-- /main charts -->
+
+
+
+						<!-- Footer -->
+						<div class="footer text-muted">
+							&copy; 2019. <a href="#">E-Ticaret Admin Platformu</a> by <a
+								href="https://www.instagram.com/ibrhmglcyz" target="_blank">Ibrahim
+								Gulecyuz</a>
+						</div>
+						<!-- /footer -->
+
+					</div>
+					<!-- /ORTA ALAN -->
+
+				</div>
+				<!-- /ORTA KISIM -->
+
+			</div>
+			<!-- /page content -->
+
+		</div>
+		<!-- /page container -->
+
+	</h:form>
+</h:body>
+</html>

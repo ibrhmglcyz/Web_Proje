@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<link
+		href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
+		rel="stylesheet" id="bootstrap-css" />
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<style>
+.colorgraph {
+	height: 5px;
+	border-top: 0;
+	background: #c4e17f;
+	border-radius: 5px;
+	background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%,
+		#f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%,
+		#db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%,
+		#669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%,
+		#f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%,
+		#db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%,
+		#669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca
+		25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe
+		50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1
+		87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca
+		25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe
+		50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1
+		87.5%, #62c2e4 87.5%, #62c2e4);
+}
+</style>
+</h:head>
+<h:body>
+	<h:form>
+		<div class="container">
+
+			<div class="row">
+				<div
+					class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+
+					<h2>
+						Please Sign Up <small>It's free and always will be.</small>
+					</h2>
+					<hr class="colorgraph" />
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<h4>First Name</h4>
+							<div class="form-group">
+								<h:inputText value="#{registerBean.usr.fname}"
+									class="form-control" />
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<h4>Last Name</h4>
+							<div class="form-group">
+								<h:inputText value="#{registerBean.usr.lname}"
+									class="form-control" />
+							</div>
+						</div>
+					</div>
+					<h4>Username</h4>
+					<div class="form-group">
+						<h:inputText value="#{registerBean.login.username}"
+							class="form-control" />
+					</div>
+					<h4>E-Mail Adress</h4>
+					<div class="form-group">
+						<h:inputText value="#{registerBean.usr.email}"
+							class="form-control" />
+					</div>
+					<h4>Phone Number</h4>
+					<div class="form-group">
+						<h:inputText value="#{registerBean.usr.phonenumber}"
+							class="form-control" />
+					</div>
+					<h4>Adress</h4>
+					<div class="form-group">
+						<h:inputText value="#{registerBean.usr.adress}"
+							class="form-control" />
+					</div>
+
+
+					<div class="form-group">
+						<h4>Password</h4>
+						<div class="form-group">							
+						<h:inputSecret id = "password" size = "20" label = "Password"  
+               required = "true" redisplay = "true" class="form-control" value="#{registerBean.login.password}"> 
+               <f:validateLength for = "password" minimum = "5" maximum = "10"
+								class="form-control" />  
+            </h:inputSecret> 
+						</div>
+					</div>
+
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-building"></i>
+							</span>
+						</div>
+						<h:selectOneMenu class="custom-select"
+							value="#{registerBean.usr.uniqueid}">
+							<f:selectItem itemValue="1" itemLabel="Users" />
+							<f:selectItem itemValue="99" itemLabel="Admin" />
+						</h:selectOneMenu>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-4 col-sm-3 col-md-3">
+							<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input"
+								id="exampleCheck1" /> <label class="form-check-label"
+								for="exampleCheck1"><h5>I Agree</h5></label> 
+						</div>
+						</div>
+						<div class="col-xs-8 col-sm-9 col-md-9">
+							By clicking <strong class="label label-primary">Register</strong>,
+							you agree to the <a href="#" data-toggle="modal"
+								data-target="#t_and_c_m">Terms and Conditions</a> set out by
+							this site, including our Cookie Use.
+						</div>
+					</div>
+
+					<hr class="colorgraph" />
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<a href="login.jsf" class="btn btn-primary btn-block btn-lg">Cancel</a>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<h:commandButton class="btn btn-success btn-block btn-lg"
+								value="Create New Account" action="#{registerBean.kaydet}" />
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog"
+				aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-hidden="true">×</button>
+							<h4 class="modal-title" id="myModalLabel">Terms Conditions</h4>
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary"
+								data-dismiss="modal">I Agree</button>
+						</div>
+
+
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+		</div>
+	</h:form>
+</h:body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css" />
+	<link href="../Design/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css" />
+	<link href="../Design/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="../Design/assets/css/core.css" rel="stylesheet" type="text/css" />
+	<link href="../Design/assets/css/components.css" rel="stylesheet" type="text/css" />
+	<link href="../Design/assets/css/colors.css" rel="stylesheet" type="text/css" />
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="../Design/assets/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="../Design/assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="../Design/assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../Design/assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="../Design/assets/js/plugins/forms/styling/uniform.min.js"></script>
+
+	<script type="text/javascript" src="../Design/assets/js/core/app.js"></script>
+	<script type="text/javascript" src="../Design/assets/js/pages/form_inputs.js"></script>
+	<!-- /theme JS files -->
+	
+</head>
+
+<h:body>
+	<h:form class="form-horizontal" action="#">
+	
+	<fieldset class="content-group">
+	<legend class="text-bold"><h2>Lutfen Urun Hakkinda Bilgileri Giriniz</h2></legend>
+
+	<div class="form-group col-lg-6">
+		<label class="control-label col-lg-2">Urun Adi:</label>
+		<div class="col-lg-10">
+			
+			<h:inputText class="form-control" value="#{urunEkleBean.ad}"></h:inputText>
+		</div>
+	</div>
+
+	<div class="form-group col-lg-6">
+		<label class="control-label col-lg-2">Urun Markasi:</label>
+		<div class="col-lg-10">
+			<h:inputText class="form-control" value="#{urunEkleBean.marka}"></h:inputText>
+		</div>
+	</div>
+
+	<div class="form-group col-lg-6">
+		<label class="control-label col-lg-2">Urun Modeli:</label>
+		<div class="col-lg-10">
+			<h:inputText class="form-control" value="#{urunEkleBean.model}"></h:inputText>
+		</div>
+	</div>
+
+	<div class="form-group col-lg-6">
+		<label class="control-label col-lg-2">Urun Birimi:</label>
+		<div class="col-lg-10">
+			<h:inputText class="form-control" value="#{urunEkleBean.birim}"></h:inputText>
+		</div>
+	</div>
+	
+	<div class="form-group col-lg-6">
+		<label class="control-label col-lg-2">Urun Stok Adedi:</label>
+		<div class="col-lg-10">
+			<h:inputText class="form-control" value="#{urunEkleBean.stokadedi}"></h:inputText>
+		</div>
+	</div>
+
+	<div class="form-group col-lg-6">
+		<label class="control-label col-lg-2">Urun Fiyati:</label>
+		<div class="col-lg-10">
+			<h:inputText class="form-control" value="#{urunEkleBean.fiyat}"></h:inputText>
+		</div>
+	</div>
+
+	<div class="form-group col-lg-6">
+		<label class="control-label col-lg-2">Urun Kategori Id'si:</label>
+		<div class="col-lg-10">
+			<h:inputText class="form-control" value="#{urunEkleBean.kategoriid}"></h:inputText>
+		</div>
+	</div>
+
+	<div class="form-group col-lg-6">
+		<label class="control-label col-lg-2">Urun Kategori Id'si:</label>
+		<div class="col-lg-10">
+			<select name="select" class="form-control">
+				<option value="opt1">Usual select box</option>
+				<option value="opt2">Option 2</option>
+				<option value="opt3">Option 3</option>
+				<option value="opt4">Option 4</option>
+				<option value="opt5">Option 5</option>
+				<option value="opt6">Option 6</option>
+				<option value="opt7">Option 7</option>
+				<option value="opt8">Option 8</option>
+			</select>
+		</div>
+	</div>
+<div class="form-group col-lg-6">
+			<div class="col-lg-10">
+							<h:commandButton class="btn btn-success btn-block btn-lg"
+								value="KAYDET" action="#{urunEkleBean.kaydet}" />
+						</div>
+</div>
+</fieldset>
+	
+	</h:form>
+</h:body>
+
+</html>

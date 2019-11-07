@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<link
+		href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
+		rel="stylesheet" id="bootstrap-css" />
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<style>
+.colorgraph {
+	height: 5px;
+	border-top: 0;
+	background: #c4e17f;
+	border-radius: 5px;
+	background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%,
+		#f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%,
+		#db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%,
+		#669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%,
+		#f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%,
+		#db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%,
+		#669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca
+		25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe
+		50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1
+		87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca
+		25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe
+		50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1
+		87.5%, #62c2e4 87.5%, #62c2e4);
+}
+</style>
+
+</h:head>
+
+<h:body>
+	<h:form>
+		<div class="container">
+
+			<div class="row" style="margin-top: 20px">
+				<div
+					class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+
+					<fieldset>
+						<h2>Please Sign In</h2>
+						<hr class="colorgraph" />
+						<h3>Username</h3>
+						<div class="form-group">
+							<h:inputText value="#{loginBean.username}" type="text"
+								class="form-control input-lg" name="username" />
+						</div>
+						<h3>Password</h3>
+						<div class="form-group">
+							
+								<h:inputSecret id = "password" label = "Password"  
+               required = "true" redisplay = "true" class="form-control input-lg" value="#{loginBean.password}" /> 
+              
+						</div>
+
+
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input"
+								id="exampleCheck1" /> <label class="form-check-label"
+								for="exampleCheck1"><h5>Remember the password</h5></label> 
+								<a
+								href="forgotPassword.jsf" class="btn btn-link pull-right">Forgot
+								Password?</a>
+						</div>
+
+						<hr class="colorgraph" />
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<h:commandButton action="#{loginBean.Login}" value="Sign In"
+									class="btn btn-lg btn-success btn-block" />
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<a href="register.jsf" class="btn btn-lg btn-primary btn-block">Register</a>
+							</div>
+						</div>
+					</fieldset>
+
+				</div>
+			</div>
+
+		</div>
+	</h:form>
+</h:body>
+</html>
